@@ -50,8 +50,8 @@ def inserting():
 @app.route('/db_select')
 def selecting():
     conn = psycopg2.connect("postgres://lab10_bball_db_user:dSQtWQ3PQ28wsIVf6vp3BoiF15FB474i@dpg-co4ebakf7o1s738rff3g-a/lab10_bball_db")
-    curr = conn.cursor()
-    curr.execute('''
+    cur = conn.cursor()
+    cur.execute('''
         SELECT * FROM Basketball;
         ''')
     records = cur.fetchall()
